@@ -18,18 +18,10 @@ let segundos = 0
 function iniciarelogio(){
   const timer = setInterval(function(){
     segundos++;
-    relogio.innerHTML = segundos
+    relogio.innerHTML = criaHoraDosSegundos(segundos)
   }, 1000)
 }
 
 iniciar.addEventListener('click', function(){
   iniciarelogio()
-})
-
-pausar.addEventListener('click', function(){
-  relogio.innerHTML = 'cliquei no inciar';
-})
-
-zerar.addEventListener('click', function(){
-  relogio.innerHTML = 'cliquei no inciar';
 })
