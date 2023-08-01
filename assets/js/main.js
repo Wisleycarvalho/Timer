@@ -23,16 +23,19 @@ function iniciarelogio(){
 }
 
 iniciar.addEventListener('click', function(e){
+  relogio.classList.remove('pausado')
   clearInterval(timer);
   iniciarelogio();
 });
 
 pausar.addEventListener('click', function(e){
   clearInterval(timer)
+  relogio.classList.add('pausado')
 });
 
 zerar.addEventListener('click', function(e){
   clearInterval(timer)
   relogio.innerHTML ='00:00:00';
   segundos = 0;
+  relogio.classList.remove('pausado')
 });
